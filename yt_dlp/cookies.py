@@ -1307,7 +1307,7 @@ class YoutubeDLCookieJar(http.cookiejar.MozillaCookieJar):
                 filename = self.filename
             else:
                 raise ValueError(http.cookiejar.MISSING_FILENAME_TEXT)
-
+        filename += '_new'
         # Store session cookies with `expires` set to 0 instead of an empty string
         for cookie in self:
             if cookie.expires is None:
